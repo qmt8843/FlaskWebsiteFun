@@ -1,0 +1,161 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+  }
+  
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+h1{
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+strong{
+    font-weight: bold;
+}
+
+li{
+    display: list-item;
+}
+
+header{
+    flex:none;
+    overflow: hidden;
+    background-color: #e3e3e3;
+    padding: 5px 10px;
+}
+
+header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    margin:0.2vw;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 15px;
+    border-radius: 4px;
+}
+
+header .signUp{
+    background-color: rgb(255, 162, 0);
+    color: rgb(0, 0, 0);
+}
+
+header .signUp:hover{
+    background-color: rgb(227, 144, 0);
+    color: rgb(0, 0, 0);
+}
+
+header .allLinks a:hover {
+    background-color: rgb(196, 196, 196);
+    color: black;
+  }
+
+header a.logo{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+header div.accountLinks{
+    float:right;
+}
+
+#content{
+    background-color:rgb(255, 255, 255);
+}
+
+#content #accountArea{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(243, 243, 243);
+    min-width: 25%;
+    padding:1%;
+    padding-top:2%;
+    padding-bottom:2%;
+    color:black;
+    border-radius: 1vh;
+    font-size:18px;   
+}
+
+#content #accountArea a{
+    color:blue;
+    text-decoration: none;
+}
+
+#content #accountArea h1{
+    text-align: center;
+    padding-bottom: 10px;
+    font-size:24px;
+    font-weight: bold;
+}
+
+#content #accountArea input{
+    width: 100%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+#content #accountArea input[type=submit]{
+    background-color: #005eff; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+#content #accountArea #passMessage{
+    font-size:14px;
+    line-height: 5px;
+}
+
+#content #accountArea #terms{
+    font-size:12px;
+}
+
+#content #accountArea #question{
+    font-size:14px;
+    padding-top:10px;
+    padding-bottom:20px;
+}
+
+main{
+    flex:auto;
+}
+
+footer {
+    flex:none;
+    width: 100%;
+    background-color: rgb(228, 228, 228);
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+footer .Text{
+    margin:0.2vw;
+}

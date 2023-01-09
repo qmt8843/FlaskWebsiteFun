@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Log In{% endblock %}
+{% block content %}
+<div id="accountArea">
+  <h1>Log In</h1>
+  <form method="POST" action="/login">
+    Username: <input type="text" name="uname" minlength="2" autocomplete="username" required><br>
+    Password: <input type="password" name="psw" minlength="8" autocomplete="current-password" required><br>
+    <input type="submit" value="Log In">
+  </form>
+  <div id="question">
+    Don't have an account? <a href="{{url_for('signup')}}">Sign up</a>
+  </div>
+</div>
+{% endblock %}

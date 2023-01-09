@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    {% block head %}
+    <meta charset="UTF-8" />
+    <meta name="description" content="This is the home page" />
+    <meta name="keywords" context="home, home page" />
+    <link rel="stylesheet" href="static/styles/reset.css" />
+    <link rel="stylesheet" href="static/styles/style.css" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>{% block title %}{% endblock %} - QuinnSite</title>
+    {% endblock %}
+  </head>
+  <body>
+    <header>
+      <a href="{{url_for('home')}}" class="logo">QuinnSite</a>
+      <div class="allLinks">
+        <div class="headerLinks">
+          <a href="{{url_for('home')}}">Home</a>
+          <a href="{{url_for('private')}}">Private</a>
+          <a href="{{url_for('private')}}">Private</a>
+          <a href="{{url_for('tos')}}">TOS</a>
+        </div>
+        <div class="accountLinks">
+          {% if username %}
+          <a href="{{url_for('private')}}">{{username}}</a>
+          <a href="{{url_for('logout')}}" class="logOut">Log Out</a>
+          {% else %}
+          <a href="{{url_for('login')}}" class="logIn">Login</a> <a href="{{url_for('signup')}}" class="signUp">Sign Up</a><br>
+          {% endif %}
+        </div>
+      </div>
+    </header>
+    <main id="content">{% block content %}{% endblock %}</main>
+    <footer>
+      <div class="Text">
+        {% block footer %}
+        <p>Copyright &copy; All Rights Reserved. Quinn</p>
+        <a href="{{url_for('tos')}}" class="logIn">Terms of Service</a>
+        {% endblock %}
+      </div>
+    </footer>
+  </body>
+</html>
